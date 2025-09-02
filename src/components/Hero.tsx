@@ -39,10 +39,10 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="text-lg px-8 py-6">
               <Leaf className="w-5 h-5 mr-2" />
-              Explore Products
+              <a href="/products">Explore Products</a>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-              Learn More
+              <a href="#about">Learn More</a>
             </Button>
           </div>
           
@@ -52,12 +52,12 @@ const Hero = () => {
               <div className="text-sm text-muted-foreground">Pure & Natural</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">FSSAI</div>
-              <div className="text-sm text-muted-foreground">Certified Quality</div>
+              <div className="text-3xl font-bold text-primary mb-2">15+</div>
+              <div className="text-sm text-muted-foreground">Premium Products</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Happy Customers</div>
+              <div className="text-3xl font-bold text-primary mb-2">FSSAI</div>
+              <div className="text-sm text-muted-foreground">Certified Quality</div>
             </div>
           </div>
         </div>

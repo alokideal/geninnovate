@@ -14,14 +14,14 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
-          <a href="#products" className="text-foreground hover:text-primary transition-colors">Products</a>
+          <a href="/" className="text-foreground hover:text-primary transition-colors">Home</a>
+          <a href="/products" className="text-foreground hover:text-primary transition-colors">Products</a>
           <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
           <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
         </nav>
 
         <Button variant="default" className="hidden md:inline-flex">
-          Shop Now
+          <a href="/products">Shop Now</a>
         </Button>
       </div>
     </header>

@@ -1,36 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Leaf, Droplets, Sparkles, Heart } from "lucide-react";
+import { Leaf, Droplets, Heart, Sparkles } from "lucide-react";
+import { productCategories } from "@/data/products";
 
-const categories = [
-  {
-    icon: Leaf,
-    title: "Leaf Powders",
-    description: "Pure organic leaf powders including neem, moringa, and curry leaves",
-    productCount: "12+ Products",
-    color: "text-green-600"
-  },
-  {
-    icon: Droplets,
-    title: "Health Oils",
-    description: "Premium cold-pressed oils for skincare and haircare",
-    productCount: "8+ Products", 
-    color: "text-blue-600"
-  },
-  {
-    icon: Sparkles,
-    title: "Seed Powders",
-    description: "Nutrient-rich seed powders for natural wellness",
-    productCount: "6+ Products",
-    color: "text-yellow-600"
-  },
-  {
-    icon: Heart,
-    title: "Wellness Blends",
-    description: "Specially formulated herbal blends for complete health",
-    productCount: "10+ Products",
-    color: "text-red-500"
-  }
-];
+const iconMap = {
+  Leaf: Leaf,
+  Droplets: Droplets, 
+  Heart: Heart,
+  Sparkles: Sparkles
+};
 
 const ProductCategories = () => {
   return (
@@ -46,24 +23,21 @@ const ProductCategories = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((category, index) => {
-            const IconComponent = category.icon;
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {productCategories.map((category, index) => {
+            const IconComponent = iconMap[category.icon as keyof typeof iconMap] || Leaf;
             return (
               <Card 
-                key={index} 
+                key={category.id} 
                 className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-border/50 hover:border-primary/30"
               >
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <IconComponent className={`w-8 h-8 ${category.color}`} />
+                    <IconComponent className="w-8 h-8 text-primary" />
                   </div>
                   <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
-                    {category.title}
+                    {category.name}
                   </CardTitle>
-                  <div className="text-sm text-primary font-semibold">
-                    {category.productCount}
-                  </div>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <CardDescription className="text-center text-muted-foreground">
