@@ -8,7 +8,7 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <img src={genlLogo} alt="Genl Logo" className="h-12 w-12" />
           <div>
-            <h1 className="text-xl font-bold text-primary">Geninnovate Pvt. Ltd.</h1>
+            <h1 className="text-xl font-bold text-primary">GenInnovate Solutions Pvt. Ltd.</h1>
             <p className="text-sm text-muted-foreground">Pure Herbal Products</p>
           </div>
         </div>
