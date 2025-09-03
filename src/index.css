@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 150 40% 15%;
 
-    --primary: 150 55% 25%;
+    --primary: 150 60% 20%;
     --primary-foreground: 50 15% 97%;
 
     --secondary: 120 25% 85%;
@@ -34,39 +34,43 @@ All colors MUST be HSL.
 
     --border: 120 20% 88%;
     --input: 120 20% 88%;
-    --ring: 150 55% 35%;
+    --ring: 150 60% 25%;
 
-    /* Custom organic theme colors */
-    --organic-green: 150 55% 25%;
+    /* Luxury organic theme colors */
+    --organic-green: 150 60% 20%;
     --organic-light: 120 40% 75%;
     --organic-accent: 80 60% 50%;
-    --earth-brown: 30 25% 45%;
-    --natural-cream: 45 50% 92%;
+    --earth-brown: 30 35% 35%;
+    --natural-cream: 45 60% 95%;
+    --sage-green: 120 25% 65%;
+    --forest-green: 150 50% 15%;
+    --gold-accent: 45 85% 60%;
 
-    /* Gradients */
-    --gradient-organic: linear-gradient(135deg, hsl(var(--organic-green)), hsl(var(--organic-light)));
+    /* Gradients - Luxury organic feel */
+    --gradient-organic: linear-gradient(135deg, hsl(var(--organic-green)), hsl(var(--sage-green)));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--organic-green)), hsl(var(--gold-accent)));
     --gradient-natural: linear-gradient(180deg, hsl(var(--natural-cream)), hsl(var(--background)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--natural-cream)) 100%);
     
-    /* Shadows */
+    /* Luxury shadows */
+    --shadow-luxury: 0 20px 40px -10px hsl(var(--organic-green) / 0.3);
     --shadow-organic: 0 10px 30px -10px hsl(var(--organic-green) / 0.2);
     --shadow-soft: 0 4px 20px -4px hsl(var(--organic-green) / 0.15);
+    --shadow-glow: 0 0 30px hsl(var(--gold-accent) / 0.2);
 
-    --radius: 0.5rem;
+    /* Modern animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -123,9 +127,17 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 
-  /* Custom animations */
+  /* Modern luxury animations */
   .animate-float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
   }
 
   @keyframes float {
@@ -133,9 +145,58 @@ All colors MUST be HSL.
     50% { transform: translateY(-10px); }
   }
 
+  @keyframes glow {
+    from { box-shadow: var(--shadow-organic); }
+    to { box-shadow: var(--shadow-glow); }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Luxury interaction effects */
+  .luxury-card {
+    background: var(--gradient-card);
+    transition: var(--transition-luxury);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .luxury-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-luxury);
+    border-color: hsl(var(--gold-accent) / 0.3);
+  }
+
+  .organic-gradient {
+    background: var(--gradient-organic);
+  }
+
+  .luxury-gradient {
+    background: var(--gradient-luxury);
+  }
+
   /* Enhanced focus styles */
   *:focus-visible {
-    outline: 2px solid hsl(var(--primary));
+    outline: 2px solid hsl(var(--gold-accent));
     outline-offset: 2px;
+  }
+
+  /* Premium text effects */
+  .text-luxury {
+    background: var(--gradient-luxury);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gold {
+    color: hsl(var(--gold-accent));
   }
 }

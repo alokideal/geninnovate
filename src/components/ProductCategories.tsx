@@ -1,53 +1,75 @@
+import { productCategories, getProductsByCategory } from "@/data/products";
+import ProductCardEnhanced from "./ProductCardEnhanced";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Leaf, Droplets, Heart, Sparkles } from "lucide-react";
-import { productCategories } from "@/data/products";
+import { Leaf, Droplets, Heart } from "lucide-react";
 
 const iconMap = {
   Leaf: Leaf,
   Droplets: Droplets, 
-  Heart: Heart,
-  Sparkles: Sparkles
+  Heart: Heart
 };
 
 const ProductCategories = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Our Product Categories
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Luxury Herbal 
+            <span className="text-luxury"> Collection</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore our comprehensive range of organic herbal products, 
-            each category crafted with traditional wisdom and modern quality standards.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Explore our premium categories of organic wellness products, each crafted with 
+            traditional wisdom and modern quality standards.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {productCategories.map((category, index) => {
-            const IconComponent = iconMap[category.icon as keyof typeof iconMap] || Leaf;
-            return (
-              <Card 
-                key={category.id} 
-                className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-border/50 hover:border-primary/30"
-              >
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <IconComponent className="w-8 h-8 text-primary" />
+
+        {productCategories.map((category) => {
+          const products = getProductsByCategory(category.id);
+          const IconComponent = iconMap[category.icon as keyof typeof iconMap];
+          
+          return (
+            <div key={category.id} className="mb-20">
+              {/* Category Header */}
+              <Card className="luxury-card mb-12 bg-gradient-card">
+                <CardHeader className="text-center py-12">
+                  <div className="flex justify-center mb-4">
+                    <div className="p-4 rounded-full luxury-gradient">
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
                   </div>
-                  <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                  <CardTitle className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                     {category.name}
                   </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <CardDescription className="text-center text-muted-foreground">
+                  <CardDescription className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                     {category.description}
                   </CardDescription>
-                </CardContent>
+                </CardHeader>
               </Card>
-            );
-          })}
-        </div>
+
+              {/* Products Grid */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {products.slice(0, 6).map((product) => (
+                  <ProductCardEnhanced 
+                    key={product.id} 
+                    product={product}
+                  />
+                ))}
+              </div>
+
+              {products.length > 6 && (
+                <div className="text-center mt-8">
+                  <a 
+                    href={`/products?category=${category.id}`}
+                    className="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  >
+                    View All {category.name}
+                  </a>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
