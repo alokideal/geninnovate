@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenInnovate Solutions - Luxury Herbal & Organic Product Collection</title>
+    <meta name="description" content="Premium organic herbal products from GenInnovate Solutions. FSSAI certified Ayurvedic powders, oils, and wellness products sourced from rural India.">
+    <meta name="keywords" content="organic herbal products, ayurvedic powders, natural oils, ashwagandha, neem, tulsi, moringa, amla, wellness products">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://geninnovate.com">
+    <style>
+        :root {
+            --primary: 142 76% 36%;
+            --primary-foreground: 355 0% 100%;
+            --secondary: 210 40% 98%;
+            --secondary-foreground: 222 84% 5%;
+            --muted: 210 40% 96%;
+            --muted-foreground: 215 16% 47%;
+            --accent: 210 40% 96%;
+            --accent-foreground: 222 84% 5%;
+            --destructive: 0 84% 60%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214 32% 91%;
+            --input: 214 32% 91%;
+            --ring: 142 76% 36%;
+            --background: 0 0% 100%;
+            --foreground: 222 84% 5%;
+            --luxury: 43 74% 66%;
+            --gold-accent: 45 93% 47%;
+            --natural-cream: 47 100% 97%;
+        }
+        
+        .luxury-gradient {
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--luxury)));
+        }
+        
+        .luxury-card {
+            background: white;
+            border: 1px solid hsl(var(--border));
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .luxury-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .animate-glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+            to { box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="/src/assets/genl-logo.png" alt="GenInnovate Logo" class="h-12 w-12">
+                <div>
+                    <h1 class="text-xl font-bold" style="color: hsl(var(--primary))">GenInnovate Solutions Pvt. Ltd.</h1>
+                    <p class="text-sm text-gray-600">Pure Herbal Products</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-800 hover:text-green-600 transition-colors">Home</a>
+                <a href="#products" class="text-gray-800 hover:text-green-600 transition-colors">Products</a>
+                <a href="#about" class="text-gray-800 hover:text-green-600 transition-colors">About</a>
+                <a href="#contact" class="text-gray-800 hover:text-green-600 transition-colors">Contact</a>
+            </nav>
+
+            <button class="hidden md:inline-flex px-6 py-2 luxury-gradient text-white rounded-lg font-semibold hover:opacity-90 transition-all">
+                Shop Now
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="/src/assets/hero-banner.jpg" alt="Organic herbal products background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 luxury-gradient opacity-80"></div>
+            </div>
+            
+            <div class="absolute top-20 left-10 animate-float">
+                <svg class="w-12 h-12 text-yellow-400 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66C7.7 17.01 10.25 11.13 17 8z"/>
+                    <path d="M3.82 21.34C5.9 16.17 8 10 17 8v7l-1.61 1.61c-.78.78-.78 2.05 0 2.83.78.78 2.05.78 2.83 0L21 16.66V8c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v1c-8 2-10.25 7.88-12.18 12.34z"/>
+                </svg>
+            </div>
+            
+            <div class="relative z-10 container mx-auto px-4 text-center">
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="animate-glow inline-block px-6 py-2 luxury-gradient text-white rounded-full text-sm font-medium">
+                        GenInnovate – Luxury Herbal & Organic Product Collection
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                            Pure
+                            <span style="color: hsl(var(--luxury))" class="block">Organic</span>
+                            Wellness
+                        </h1>
+                        <p class="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto leading-relaxed">
+                            Premium herbal products sourced from rural India. 100% organic, FSSAI certified, 
+                            and crafted with ancient Ayurvedic wisdom.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap justify-center gap-6 py-6">
+                        <div class="flex items-center space-x-2 text-white opacity-90">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.5V11.5C14.8,12.4 14.1,13.2 13.2,13.4L14,16H10L10.8,13.4C9.9,13.2 9.2,12.4 9.2,11.5V10.5C9.2,8.6 10.6,7 12,7Z"/>
+                            </svg>
+                            <span class="text-sm font-medium">FSSAI Certified</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-white opacity-90">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66C7.7 17.01 10.25 11.13 17 8z"/>
+                            </svg>
+                            <span class="text-sm font-medium">100% Organic</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-white opacity-90">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5,16L3,14L5,12L3,10L5,8L3,6L5,4L7,6L9,4L11,6L13,4L15,6L17,4L19,6L17,8L19,10L17,12L19,14L17,16L15,14L13,16L11,14L9,16L7,14L5,16Z"/>
+                            </svg>
+                            <span class="text-sm font-medium">Premium Quality</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-white opacity-90">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2Z"/>
+                            </svg>
+                            <span class="text-sm font-medium">Made in India</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                        <button class="px-8 py-4 text-lg font-semibold text-black rounded-lg transition-all duration-300 hover:scale-105" 
+                                style="background-color: hsl(var(--gold-accent))">
+                            Explore Products
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section id="categories" class="py-20" style="background-color: hsl(var(--natural-cream))">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        Premium Product 
+                        <span style="color: hsl(var(--luxury))"> Categories</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Discover our carefully curated collection of organic herbal products, 
+                        each category crafted to support your natural wellness journey.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="luxury-card p-8 text-center">
+                        <div class="w-16 h-16 luxury-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66C7.7 17.01 10.25 11.13 17 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Herbal Powders</h3>
+                        <p class="text-gray-600 mb-6">Pure organic herbal powders for wellness and vitality</p>
+                        <button class="px-6 py-2 luxury-gradient text-white rounded-lg font-semibold hover:opacity-90 transition-all">
+                            Explore Powders
+                        </button>
+                    </div>
+                    
+                    <div class="luxury-card p-8 text-center">
+                        <div class="w-16 h-16 luxury-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Organic Oils</h3>
+                        <p class="text-gray-600 mb-6">Cold-pressed oils for skin, hair, and therapeutic use</p>
+                        <button class="px-6 py-2 luxury-gradient text-white rounded-lg font-semibold hover:opacity-90 transition-all">
+                            Explore Oils
+                        </button>
+                    </div>
+                    
+                    <div class="luxury-card p-8 text-center">
+                        <div class="w-16 h-16 luxury-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Wellness Products</h3>
+                        <p class="text-gray-600 mb-6">Traditional Ayurvedic herbs for complete wellness</p>
+                        <button class="px-6 py-2 luxury-gradient text-white rounded-lg font-semibold hover:opacity-90 transition-all">
+                            Explore Wellness
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section id="products" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        Featured 
+                        <span style="color: hsl(var(--luxury))"> Premium</span> Products
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Discover our most popular organic herbal products, carefully selected for their 
+                        exceptional quality and traditional benefits.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Ashwagandha Root Powder -->
+                    <div class="luxury-card overflow-hidden">
+                        <div class="relative">
+                            <img src="/src/assets/ashwagandha-powder.jpg" alt="Ashwagandha Root Powder" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-2 py-1 luxury-gradient text-white text-xs rounded">Sale</div>
+                            <div class="absolute top-3 left-3 px-2 py-1 luxury-gradient text-white text-xs rounded">Featured</div>
+                        </div>
+                        
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-gray-800">Ashwagandha Root Powder</h3>
+                                    <div class="flex items-center space-x-2 mt-1">
+                                        <div class="flex items-center">
+                                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
+                                            </svg>
+                                            <span class="text-sm font-medium ml-1">4.8</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">(124 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                A natural adaptogen that rejuvenates energy, reduces stress, and promotes overall vitality.
+                            </p>
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-sm font-semibold">Choose Weight:</h4>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 luxury-gradient text-white text-xs rounded">250g</button>
+                                    <button class="px-3 py-1 border border-gray-300 text-gray-700 text-xs rounded hover:bg-gray-50">500g</button>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-sm font-semibold text-gray-800">Key Benefits:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        100% Pure & Organic
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Boosts strength and stamina
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Enhances mental clarity
+                                    </li>
+                                    <li class="text-xs" style="color: hsl(var(--primary))">
+                                        +3 more benefits
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-2xl font-bold" style="color: hsl(var(--primary))">₹349</span>
+                                    <span class="text-lg text-gray-500 line-through">₹449</span>
+                                </div>
+                                
+                                <button class="px-6 py-2 luxury-gradient text-white font-semibold rounded hover:opacity-90 transition-all">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Neem Leaf Powder -->
+                    <div class="luxury-card overflow-hidden">
+                        <div class="relative">
+                            <img src="/src/assets/neem-powder.jpg" alt="Neem Leaf Powder" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-2 py-1 luxury-gradient text-white text-xs rounded">Sale</div>
+                            <div class="absolute top-3 left-3 px-2 py-1 luxury-gradient text-white text-xs rounded">Featured</div>
+                        </div>
+                        
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-gray-800">Neem Leaf Powder</h3>
+                                    <div class="flex items-center space-x-2 mt-1">
+                                        <div class="flex items-center">
+                                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
+                                            </svg>
+                                            <span class="text-sm font-medium ml-1">4.8</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">(156 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Detoxifying green powder with antibacterial properties for skin, immunity & wellness.
+                            </p>
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-sm font-semibold">Choose Weight:</h4>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 luxury-gradient text-white text-xs rounded">250g</button>
+                                    <button class="px-3 py-1 border border-gray-300 text-gray-700 text-xs rounded hover:bg-gray-50">500g</button>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-sm font-semibold text-gray-800">Key Benefits:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Clears skin naturally
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Supports liver detoxification
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Improves oral & digestive health
+                                    </li>
+                                    <li class="text-xs" style="color: hsl(var(--primary))">
+                                        +3 more benefits
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-2xl font-bold" style="color: hsl(var(--primary))">₹299</span>
+                                    <span class="text-lg text-gray-500 line-through">₹399</span>
+                                </div>
+                                
+                                <button class="px-6 py-2 luxury-gradient text-white font-semibold rounded hover:opacity-90 transition-all">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Moringa Leaf Powder -->
+                    <div class="luxury-card overflow-hidden">
+                        <div class="relative">
+                            <img src="/src/assets/moringa-powder.jpg" alt="Moringa Leaf Powder" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 px-2 py-1 luxury-gradient text-white text-xs rounded">Featured</div>
+                        </div>
+                        
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-gray-800">Moringa Leaf Powder</h3>
+                                    <div class="flex items-center space-x-2 mt-1">
+                                        <div class="flex items-center">
+                                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
+                                            </svg>
+                                            <span class="text-sm font-medium ml-1">4.9</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">(203 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                The "Miracle Tree" superfood rich in vitamins, minerals & antioxidants.
+                            </p>
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-sm font-semibold">Choose Weight:</h4>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 luxury-gradient text-white text-xs rounded">250g</button>
+                                    <button class="px-3 py-1 border border-gray-300 text-gray-700 text-xs rounded hover:bg-gray-50">500g</button>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-sm font-semibold text-gray-800">Key Benefits:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Boosts energy & stamina
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Promotes healthy skin & hair
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Improves digestion & metabolism
+                                    </li>
+                                    <li class="text-xs" style="color: hsl(var(--primary))">
+                                        +3 more benefits
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-2xl font-bold" style="color: hsl(var(--primary))">₹399</span>
+                                </div>
+                                
+                                <button class="px-6 py-2 luxury-gradient text-white font-semibold rounded hover:opacity-90 transition-all">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cold-Pressed Coconut Oil -->
+                    <div class="luxury-card overflow-hidden">
+                        <div class="relative">
+                            <img src="/src/assets/coconut-oil.jpg" alt="Cold-Pressed Coconut Oil" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 px-2 py-1 luxury-gradient text-white text-xs rounded">Featured</div>
+                        </div>
+                        
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-gray-800">Cold-Pressed Coconut Oil</h3>
+                                    <div class="flex items-center space-x-2 mt-1">
+                                        <div class="flex items-center">
+                                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                                                <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z"/>
+                                            </svg>
+                                            <span class="text-sm font-medium ml-1">4.6</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">(198 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Luxury-grade coconut oil for cooking, skin & hair care.
+                            </p>
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-sm font-semibold">Choose Size:</h4>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 luxury-gradient text-white text-xs rounded">250ml</button>
+                                    <button class="px-3 py-1 border border-gray-300 text-gray-700 text-xs rounded hover:bg-gray-50">500ml</button>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <h4 class="text-sm font-semibold text-gray-800">Key Benefits:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Chemical-free, pure extraction
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Deep nourishes skin
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                                        Strengthens hair roots
+                                    </li>
+                                    <li class="text-xs" style="color: hsl(var(--primary))">
+                                        +3 more benefits
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-2xl font-bold" style="color: hsl(var(--primary))">₹450</span>
+                                </div>
+                                
+                                <button class="px-6 py-2 luxury-gradient text-white font-semibold rounded hover:opacity-90 transition-all">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="px-8 py-4 luxury-gradient text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:scale-105">
+                        View All Products
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20" style="background-color: hsl(var(--natural-cream))">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                        About 
+                        <span style="color: hsl(var(--luxury))"> GenInnovate Solutions</span>
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6 text-left">
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                GenInnovate Solutions Pvt. Ltd. is dedicated to bringing you the finest organic herbal products, 
+                                sourced directly from rural India and processed using traditional Ayurvedic methods.
+                            </p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
+                                    </svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">FSSAI Certified Quality</h4>
+                                        <p class="text-gray-600">All our products are certified by FSSAI (License No: 22725592000176) ensuring the highest safety and quality standards.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M10,4H14V5H14.5A4.5,4.5 0 0,1 19,9.5V11C19,11.72 18.73,12.4 18.26,12.9L17,14.16V19A2,2 0 0,1 15,21H9A2,2 0 0,1 7,19V14.16L5.74,12.9C5.27,12.4 5,11.72 5,11V9.5A4.5,4.5 0 0,1 9.5,5H10V4M10,6V7H9.5A2.5,2.5 0 0,0 7,9.5V11L8.5,12.5H15.5L17,11V9.5A2.5,2.5 0 0,0 14.5,7H14V6H10Z"/>
+                                    </svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">100% Organic & Pure</h4>
+                                        <p class="text-gray-600">Our products contain no chemicals, preservatives, or artificial additives - just pure, natural goodness.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,6H13V8H16V10H13V13H11V10H8V8H11V6Z"/>
+                                    </svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Direct from Source</h4>
+                                        <p class="text-gray-600">We work directly with farmers and rural communities to source the freshest, highest quality herbs and ingredients.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="luxury-card p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Company Information</h3>
+                            
+                            <div class="space-y-4 text-left">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Manufactured & Marketed by:</h4>
+                                    <p class="text-gray-700">GenInnovate Solutions Pvt. Ltd.</p>
+                                    <p class="text-gray-600 text-sm">
+                                        Preetam Nagar, Nagar Nigam Food Safety Zone-01,<br>
+                                        Prayagraj, Uttar Pradesh - 211011
+                                    </p>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 gap-3 text-sm">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium text-gray-700">FSSAI Lic No:</span>
+                                        <span class="text-gray-600">22725592000176</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-medium text-gray-700">GSTIN:</span>
+                                        <span class="text-gray-600">09AALCG6791J1ZU</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-medium text-gray-700">Contact:</span>
+                                        <span class="text-gray-600">+91 9095346798</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-medium text-gray-700">Feedback:</span>
+                                        <span class="text-gray-600">geninnovate@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="/src/assets/genl-logo.png" alt="GenInnovate Logo" class="h-10 w-10">
+                        <div>
+                            <h3 class="text-lg font-bold">GenInnovate Solutions</h3>
+                            <p class="text-sm text-gray-400">Pure Herbal Products</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Premium organic herbal products sourced from rural India, processed with traditional Ayurvedic wisdom.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Herbal Powders</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Organic Oils</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Wellness Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Featured Products</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>Preetam Nagar, Nagar Nigam Food Safety Zone-01</p>
+                        <p>Prayagraj, Uttar Pradesh - 211011</p>
+                        <p>Phone: +91 9095346798</p>
+                        <p>Email: geninnovate@gmail.com</p>
+                        <p>FSSAI: 22725592000176</p>
+                        <p>GSTIN: 09AALCG6791J1ZU</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 GenInnovate Solutions Pvt. Ltd. All rights reserved. | FSSAI Certified | 100% Organic Products
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.style.backdropFilter = 'none';
+                header.style.backgroundColor = 'white';
+            }
+        });
+    </script>
+</body>
+</html>

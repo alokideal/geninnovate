@@ -6,6 +6,12 @@ import ashwagandhaPowderImage from "@/assets/ashwagandha-powder.jpg";
 import castorOilImage from "@/assets/castor-oil.jpg";
 import moringaPowderImage from "@/assets/moringa-powder.jpg";
 import amlaPowderImage from "@/assets/amla-powder.jpg";
+import brahmiPowderImage from "@/assets/brahmi-powder.jpg";
+import tulsiPowderImage from "@/assets/tulsi-powder.jpg";
+import coconutOilImage from "@/assets/coconut-oil.jpg";
+import neemOilImage from "@/assets/neem-oil.jpg";
+import giloyPowderImage from "@/assets/giloy-powder.jpg";
+import shatavariPowderImage from "@/assets/shatavari-powder.jpg";
 
 export interface Product {
   id: string;
@@ -96,7 +102,7 @@ export const products: Product[] = [
     description: "Known as the 'Herb of Grace,' Brahmi supports memory, focus, and cognitive health.",
     detailedDescription: "Premium Brahmi leaf powder from organically grown plants. This revered herb has been traditionally used to enhance cognitive function, improve memory, and support mental clarity. Perfect for students, professionals, and anyone seeking natural brain support.",
     price: "₹299",
-    image: neemPowderImage,
+    image: brahmiPowderImage,
     category: "herbal-powders",
     benefits: [
       "Promotes brain function",
@@ -164,7 +170,7 @@ export const products: Product[] = [
     description: "Sacred Ayurvedic herb for respiratory health, immunity, and stress relief.",
     detailedDescription: "Sacred Tulsi powder from premium quality Holy Basil plants. Revered in Ayurveda as the 'Queen of Herbs,' Tulsi provides comprehensive wellness support with its adaptogenic and immunomodulating properties.",
     price: "₹249",
-    image: turmericPowderImage,
+    image: tulsiPowderImage,
     category: "herbal-powders", 
     benefits: [
       "Strengthens immune system",
@@ -267,7 +273,7 @@ export const products: Product[] = [
     description: "Luxury-grade coconut oil for cooking, skin & hair care.",
     detailedDescription: "Premium cold-pressed coconut oil extracted using traditional methods. Our virgin coconut oil retains all natural nutrients and has a fresh, tropical aroma. Perfect for cooking, skin care, and hair nourishment.",
     price: "₹450",
-    image: organicOilImage,
+    image: coconutOilImage,
     category: "organic-oils",
     benefits: [
       "Chemical-free, pure extraction",
@@ -301,7 +307,7 @@ export const products: Product[] = [
     description: "Powerful therapeutic oil for skin, scalp & natural pest control.",
     detailedDescription: "Pure neem seed oil extracted from organic neem seeds. This therapeutic oil has been used for centuries for its powerful anti-bacterial, anti-fungal, and healing properties.",
     price: "₹549",
-    image: organicOilImage,
+    image: neemOilImage,
     category: "organic-oils",
     benefits: [
       "Treats dandruff & acne",
@@ -370,7 +376,7 @@ export const products: Product[] = [
     description: "Ayurvedic immunity booster for fever, infections, and chronic fatigue.",
     detailedDescription: "Pure Giloy stem powder from organically grown plants. Known as 'Amrita' or the root of immortality in Ayurveda, Giloy is a powerful immunity booster and natural detoxifier.",
     price: "₹399",
-    image: turmericPowderImage,
+    image: giloyPowderImage,
     category: "wellness-products",
     benefits: [
       "Balances blood sugar",
@@ -404,7 +410,7 @@ export const products: Product[] = [
     detailedDescription: "Premium Shatavari root powder from organically grown plants. Known as the 'Queen of Herbs' for women's health, Shatavari supports hormonal balance, reproductive health, and overall vitality.",
     price: "₹449",
     originalPrice: "₹549",
-    image: turmericPowderImage,
+    image: shatavariPowderImage,
     category: "wellness-products",
     benefits: [
       "Supports women's reproductive health",
