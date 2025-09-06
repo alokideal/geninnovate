@@ -1,12 +1,13 @@
 import { productCategories, getProductsByCategory } from "@/data/products";
 import ProductCardEnhanced from "./ProductCardEnhanced";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Leaf, Droplets, Heart } from "lucide-react";
+import { Leaf, Droplets, Heart, Zap } from "lucide-react";
 
 const iconMap = {
   Leaf: Leaf,
   Droplets: Droplets, 
-  Heart: Heart
+  Heart: Heart,
+  Zap: Zap
 };
 
 const ProductCategories = () => {
