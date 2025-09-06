@@ -1,6 +1,8 @@
 import { productCategories, getProductsByCategory } from "@/data/products";
 import ProductCardEnhanced from "./ProductCardEnhanced";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Leaf, Droplets, Heart, Zap } from "lucide-react";
 
 const iconMap = {
@@ -60,12 +62,11 @@ const ProductCategories = () => {
 
               {products.length > 6 && (
                 <div className="text-center mt-8">
-                  <a 
-                    href={`/products?category=${category.id}`}
-                    className="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                  >
-                    View All {category.name}
-                  </a>
+                  <Button asChild variant="outline" size="lg" className="luxury-border hover:luxury-gradient hover:text-white transition-all duration-300">
+                    <Link to={`/products?category=${category.id}`}>
+                      View All {category.name}
+                    </Link>
+                  </Button>
                 </div>
               )}
             </div>
